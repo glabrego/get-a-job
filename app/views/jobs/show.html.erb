@@ -1,10 +1,6 @@
-<table>
-  <td>
-    <h3><%= @job.title %></h3>
-    <hr>
-    <tr><%= @job.company %></tr>
-    <tr><%= @job.location %></tr>
-    <tr><%= @job.category %></tr>
-    <tr><%= @job.description %></tr>
-  </td>
-</table>
+<h2><%= @job.title %></h2>
+<hr>
+<p><strong>Empresa:</strong> <%= @job.category %></p>
+<p><strong>Empresa:</strong> <%= @job.company %></p>
+<p><strong>Descrição Completa:</strong> <%= @job.description %></p>
+<p><strong>Localização:</strong> <%= @job.location %></p>
