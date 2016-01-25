@@ -8,7 +8,7 @@
       "/home/glabrego/workspace/emprego-ja/app/controllers/home_controller.rb": [
         1,
         1,
-        2,
+        3,
         null,
         null
       ],
@@ -24,22 +24,13 @@
         null
       ],
       "/home/glabrego/workspace/emprego-ja/app/controllers/jobs_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1453744289
+    "timestamp": 1453747842
   }
 }

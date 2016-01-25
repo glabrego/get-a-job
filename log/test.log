@@ -1,474 +1,668 @@
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36m (24.5ms)[0m  [1mCREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "location" varchar, "company" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
-  [1m[35m (13.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
-  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
-  [1m[35m (11.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
-  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
-  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160124175433')
-  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-Started GET "/" for 127.0.0.1 at 2016-01-24 16:06:55 -0200
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:04:37 -0200
 Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (2.0ms)
-Completed 200 OK in 965ms (Views: 952.9ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36m (21.7ms)[0m  [1mCREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "location" varchar, "company" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "category" varchar, "description" varchar) [0m
-  [1m[35m (13.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
-  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
-  [1m[35m (10.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
-  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
-  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160124180846')
-  [1m[36m (8.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160124175433')[0m
-  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-Started GET "/" for 127.0.0.1 at 2016-01-24 16:10:30 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.8ms)
-Completed 200 OK in 228ms (Views: 219.5ms | ActiveRecord: 0.0ms)
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 652ms (Views: 643.4ms | ActiveRecord: 0.3ms)
   [1m[35m (0.1ms)[0m  rollback transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-24 18:10:30.783389"], ["updated_at", "2016-01-24 18:10:30.783389"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:04:38.271079"], ["updated_at", "2016-01-25 18:04:38.271079"]]
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
-Started GET "/" for 127.0.0.1 at 2016-01-24 16:10:30 -0200
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:04:38 -0200
 Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-24 16:13:46 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.9ms)
-Completed 200 OK in 226ms (Views: 218.6ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-24 18:13:46.623545"], ["updated_at", "2016-01-24 18:13:46.623545"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-24 16:13:46 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-24 22:38:26 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (1.0ms)
-Completed 200 OK in 222ms (Views: 213.8ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 00:38:26.712835"], ["updated_at", "2016-01-25 00:38:26.712835"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-24 22:38:26 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.4ms)
-Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-24 22:39:09 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (1.1ms)
-Completed 200 OK in 216ms (Views: 208.6ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 00:39:09.977923"], ["updated_at", "2016-01-25 00:39:09.977923"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-24 22:39:09 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-24 22:40:21 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (1.6ms)
-Completed 200 OK in 318ms (Views: 306.5ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.4ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 00:40:22.050400"], ["updated_at", "2016-01-25 00:40:22.050400"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-24 22:40:22 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.1ms)
-Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.3ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-24 22:41:49 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (41.7ms)
-Completed 200 OK in 314ms (Views: 301.3ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.4ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 00:41:50.185439"], ["updated_at", "2016-01-25 00:41:50.185439"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-24 22:41:50 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.1ms)
-Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-24 22:42:47 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (32.3ms)
-Completed 200 OK in 222ms (Views: 214.2ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 00:42:47.870203"], ["updated_at", "2016-01-25 00:42:47.870203"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-24 22:42:47 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:14:47 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (32.7ms)
-Completed 200 OK in 224ms (Views: 216.6ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.4ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:14:47.342648"], ["updated_at", "2016-01-25 17:14:47.342648"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:14:47 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:16:17 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (1.1ms)
-Completed 200 OK in 227ms (Views: 218.2ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:16:17.342974"], ["updated_at", "2016-01-25 17:16:17.342974"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:16:17 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.1ms)
-Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:18:42 -0200
-Processing by JobsController#index as HTML
-Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.0ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.5ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:18:42.425793"], ["updated_at", "2016-01-25 17:18:42.425793"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:18:42 -0200
-Processing by JobsController#index as HTML
-Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:22:17 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (37.7ms)
-Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.4ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:22:17.785685"], ["updated_at", "2016-01-25 17:22:17.785685"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:22:17 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.7ms)
-Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:22:47 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (36.0ms)
-Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.0ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.4ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:22:47.431389"], ["updated_at", "2016-01-25 17:22:47.431389"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:22:47 -0200
-Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
   Rendered home/index.html.erb within layouts/application (0.6ms)
-Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:23:34 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (35.0ms)
-Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.0ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:23:34.920745"], ["updated_at", "2016-01-25 17:23:34.920745"]]
-  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:23:34 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.6ms)
-Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:25:45 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (1.0ms)
-Completed 200 OK in 226ms (Views: 219.1ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:25:45.468269"], ["updated_at", "2016-01-25 17:25:45.468269"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:25:45 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:26:03 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (41.0ms)
-Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.0ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.5ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:26:03.845299"], ["updated_at", "2016-01-25 17:26:03.845299"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:26:03 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (10.2ms)
-Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:26:57 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (34.0ms)
-Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.0ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:26:57.696339"], ["updated_at", "2016-01-25 17:26:57.696339"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:26:57 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.9ms)
-Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:38:06 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (40.0ms)
-Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.4ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:38:06.760492"], ["updated_at", "2016-01-25 17:38:06.760492"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:38:06 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.7ms)
-Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:38:31 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (1.0ms)
-Completed 200 OK in 224ms (Views: 215.4ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.0ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:38:31.679013"], ["updated_at", "2016-01-25 17:38:31.679013"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:38:31 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:39:39 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.9ms)
-Completed 200 OK in 220ms (Views: 212.0ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:39:39.686403"], ["updated_at", "2016-01-25 17:39:39.686403"]]
-  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:39:39 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:42:02 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (31.8ms)
-Completed 200 OK in 226ms (Views: 216.7ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:42:02.283732"], ["updated_at", "2016-01-25 17:42:02.283732"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:42:02 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:44:31 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (1.0ms)
-Completed 200 OK in 221ms (Views: 213.7ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:44:31.520250"], ["updated_at", "2016-01-25 17:44:31.520250"]]
-  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:44:31 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:45:02 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (31.8ms)
-Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.0ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.4ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:45:02.251343"], ["updated_at", "2016-01-25 17:45:02.251343"]]
-  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:45:02 -0200
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.5ms)
-Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:45:40 -0200
-Processing by HomeController#index as HTML
-  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
-  Rendered home/index.html.erb within layouts/application (36.0ms)
-Completed 200 OK in 231ms (Views: 222.2ms | ActiveRecord: 0.2ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:45:40.592703"], ["updated_at", "2016-01-25 17:45:40.592703"]]
-  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:45:40 -0200
-Processing by HomeController#index as HTML
-  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
-  Rendered home/index.html.erb within layouts/application (0.9ms)
-Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:45:57 -0200
-Processing by HomeController#index as HTML
-  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
-  Rendered home/index.html.erb within layouts/application (33.6ms)
-Completed 200 OK in 226ms (Views: 216.9ms | ActiveRecord: 0.2ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:45:57.306339"], ["updated_at", "2016-01-25 17:45:57.306339"]]
-  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:45:57 -0200
-Processing by HomeController#index as HTML
-  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
-  Rendered home/index.html.erb within layouts/application (0.9ms)
 Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
   [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:04:38.283527"], ["updated_at", "2016-01-25 18:04:38.283527"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:04:38 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:46:14 -0200
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:10:12 -0200
 Processing by HomeController#index as HTML
-  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
-  Rendered home/index.html.erb within layouts/application (33.6ms)
-Completed 200 OK in 221ms (Views: 212.4ms | ActiveRecord: 0.2ms)
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 253ms (Views: 244.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:10:12.283303"], ["updated_at", "2016-01-25 18:10:12.283303"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:10:12 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:10:12.299849"], ["updated_at", "2016-01-25 18:10:12.299849"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:10:12 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:11:19 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 212ms (Views: 201.9ms | ActiveRecord: 0.2ms)
   [1m[35m (0.1ms)[0m  rollback transaction
   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:46:14.312707"], ["updated_at", "2016-01-25 17:46:14.312707"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:11:19.823652"], ["updated_at", "2016-01-25 18:11:19.823652"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:11:19 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:11:19.833841"], ["updated_at", "2016-01-25 18:11:19.833841"]]
   [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:46:14 -0200
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:11:19 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:13:03 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 224ms (Views: 214.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:13:03.381348"], ["updated_at", "2016-01-25 18:13:03.381348"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:13:03 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:13:03.391566"], ["updated_at", "2016-01-25 18:13:03.391566"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:13:03 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:14:32 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 311ms (Views: 297.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:14:33.232962"], ["updated_at", "2016-01-25 18:14:33.232962"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:14:33 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:14:33.245974"], ["updated_at", "2016-01-25 18:14:33.245974"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:14:33 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:16:25 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 212ms (Views: 202.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:16:25.850597"], ["updated_at", "2016-01-25 18:16:25.850597"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:16:25 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:16:25.860494"], ["updated_at", "2016-01-25 18:16:25.860494"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:16:25 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:18:51 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 210ms (Views: 201.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:18:51.855241"], ["updated_at", "2016-01-25 18:18:51.855241"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:18:51 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:18:51.864939"], ["updated_at", "2016-01-25 18:18:51.864939"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:18:51 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:19:48 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 217ms (Views: 207.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:19:48.926309"], ["updated_at", "2016-01-25 18:19:48.926309"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:19:48 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:19:48.936637"], ["updated_at", "2016-01-25 18:19:48.936637"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:19:48 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:20:56 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 210ms (Views: 201.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:20:56.957033"], ["updated_at", "2016-01-25 18:20:56.957033"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:20:56 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:20:56.974414"], ["updated_at", "2016-01-25 18:20:56.974414"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:20:56 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:21:16 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 220ms (Views: 211.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:21:16.608878"], ["updated_at", "2016-01-25 18:21:16.608878"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:21:16 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:21:16.632607"], ["updated_at", "2016-01-25 18:21:16.632607"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:21:16 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:21:37 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 211ms (Views: 202.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:21:37.911095"], ["updated_at", "2016-01-25 18:21:37.911095"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:21:37 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:21:37.920829"], ["updated_at", "2016-01-25 18:21:37.920829"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:21:37 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:22:29 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 210ms (Views: 201.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:22:30.055930"], ["updated_at", "2016-01-25 18:22:30.055930"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:22:30 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:22:30.065539"], ["updated_at", "2016-01-25 18:22:30.065539"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:22:30 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:24:06 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 211ms (Views: 202.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:24:06.649853"], ["updated_at", "2016-01-25 18:24:06.649853"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:24:06 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:24:06.659721"], ["updated_at", "2016-01-25 18:24:06.659721"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:24:06 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:24:50 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 212ms (Views: 201.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:24:50.992028"], ["updated_at", "2016-01-25 18:24:50.992028"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:24:50 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:24:51.002854"], ["updated_at", "2016-01-25 18:24:51.002854"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:24:51 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+Started GET "/jobs/1" for 127.0.0.1 at 2016-01-25 16:24:51 -0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered jobs/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:25:30 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 211ms (Views: 200.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:25:30.839702"], ["updated_at", "2016-01-25 18:25:30.839702"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:25:30 -0200
 Processing by HomeController#index as HTML
   [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
   Rendered home/index.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:25:30.850380"], ["updated_at", "2016-01-25 18:25:30.850380"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:25:30 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started GET "/jobs/id" for 127.0.0.1 at 2016-01-25 16:25:30 -0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:48:45 -0200
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.0ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:48:45.640369"], ["updated_at", "2016-01-25 17:48:45.640369"]]
-  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:48:45 -0200
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.2ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:51:01 -0200
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:25:54 -0200
 Processing by HomeController#index as HTML
-  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
-  Rendered home/index.html.erb within layouts/application (43.0ms)
-Completed 200 OK in 307ms (Views: 293.6ms | ActiveRecord: 0.5ms)
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 216ms (Views: 206.7ms | ActiveRecord: 0.2ms)
   [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:51:02.141308"], ["updated_at", "2016-01-25 17:51:02.141308"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:25:54.340333"], ["updated_at", "2016-01-25 18:25:54.340333"]]
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:51:02 -0200
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:25:54 -0200
 Processing by HomeController#index as HTML
-  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
-  Rendered home/index.html.erb within layouts/application (1.3ms)
-Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:25:54.351177"], ["updated_at", "2016-01-25 18:25:54.351177"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:25:54 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+Started GET "/jobs/1" for 127.0.0.1 at 2016-01-25 16:25:54 -0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered jobs/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:51:28 -0200
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:27:18 -0200
 Processing by HomeController#index as HTML
-  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
-  Rendered home/index.html.erb within layouts/application (33.4ms)
-Completed 200 OK in 222ms (Views: 213.5ms | ActiveRecord: 0.2ms)
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 211ms (Views: 201.2ms | ActiveRecord: 0.2ms)
   [1m[35m (0.1ms)[0m  rollback transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 17:51:29.106401"], ["updated_at", "2016-01-25 17:51:29.106401"]]
-  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
-Started GET "/" for 127.0.0.1 at 2016-01-25 15:51:29 -0200
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:27:18.931505"], ["updated_at", "2016-01-25 18:27:18.931505"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:27:18 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:27:18.942566"], ["updated_at", "2016-01-25 18:27:18.942566"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:27:18 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+Started GET "/jobs/1" for 127.0.0.1 at 2016-01-25 16:27:18 -0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered jobs/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:27:48 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 214ms (Views: 204.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:27:49.047844"], ["updated_at", "2016-01-25 18:27:49.047844"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:27:49 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:27:49.058149"], ["updated_at", "2016-01-25 18:27:49.058149"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:27:49 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:27:49 -0200
+Processing by HomeController#index as HTML
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs"
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:28:19 -0200
 Processing by HomeController#index as HTML
   [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
-  Rendered home/index.html.erb within layouts/application (1.5ms)
-Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 213ms (Views: 204.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:28:19.775746"], ["updated_at", "2016-01-25 18:28:19.775746"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:28:19 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:28:19.786880"], ["updated_at", "2016-01-25 18:28:19.786880"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:28:19 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+Started GET "/jobs/1" for 127.0.0.1 at 2016-01-25 16:28:19 -0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered jobs/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:48:48 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 213ms (Views: 204.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:48:48.706974"], ["updated_at", "2016-01-25 18:48:48.706974"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:48:48 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:48:48.717434"], ["updated_at", "2016-01-25 18:48:48.717434"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:48:48 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+Started GET "/jobs/1" for 127.0.0.1 at 2016-01-25 16:48:48 -0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered jobs/show.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:49:08 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 213ms (Views: 203.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:49:08.234585"], ["updated_at", "2016-01-25 18:49:08.234585"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:49:08 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:49:08.244153"], ["updated_at", "2016-01-25 18:49:08.244153"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:49:08 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+Started GET "/jobs/1" for 127.0.0.1 at 2016-01-25 16:49:08 -0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered jobs/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:50:41 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 209ms (Views: 200.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:50:42.065872"], ["updated_at", "2016-01-25 18:50:42.065872"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:50:42 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "jobs" ("title", "category", "company", "description", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vaga de Dev"], ["category", "Desenvolvedor"], ["company", "Campus Code"], ["description", "Dev Junior Rails com ao menos um projeto"], ["location", "São Paulo"], ["created_at", "2016-01-25 18:50:42.075941"], ["updated_at", "2016-01-25 18:50:42.075941"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-01-25 16:50:42 -0200
+Processing by HomeController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs"[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+Started GET "/jobs/1" for 127.0.0.1 at 2016-01-25 16:50:42 -0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered jobs/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
