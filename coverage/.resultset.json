@@ -1,22 +1,45 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/glabrego/workspace/get-a-job/app/helpers/application_helper.rb": [
+      "/home/glabrego/workspace/emprego-ja/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/glabrego/workspace/get-a-job/app/controllers/home_controller.rb": [
+      "/home/glabrego/workspace/emprego-ja/app/controllers/home_controller.rb": [
         1,
+        1,
+        2,
+        null,
         null
       ],
-      "/home/glabrego/workspace/get-a-job/app/controllers/application_controller.rb": [
+      "/home/glabrego/workspace/emprego-ja/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
+      ],
+      "/home/glabrego/workspace/emprego-ja/app/models/job.rb": [
+        1,
+        null
+      ],
+      "/home/glabrego/workspace/emprego-ja/app/controllers/jobs_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1453656953
+    "timestamp": 1453744289
   }
 }
