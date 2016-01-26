@@ -5,7 +5,13 @@
         1,
         null
       ],
+      "/home/glabrego/workspace/emprego-ja/app/models/company.rb": [
+        1,
+        1,
+        null
+      ],
       "/home/glabrego/workspace/emprego-ja/app/models/job.rb": [
+        1,
         1,
         null
       ],
@@ -17,9 +23,11 @@
         null,
         1,
         2,
+        2,
         null,
         null,
         1,
+        2,
         2,
         2,
         null,
@@ -45,8 +53,13 @@
         3,
         null,
         null
+      ],
+      "/home/glabrego/workspace/emprego-ja/app/controllers/companies_controller.rb": [
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1453762809
+    "timestamp": 1453776550
   }
 }
