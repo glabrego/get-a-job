@@ -13,11 +13,11 @@ feature 'Visitor visits Emprego Ja home page' do
     Job.create(title: 'Vaga de Dev',
                category: 'Desenvolvedor',
                description: 'Dev Junior Rails com ao menos um projeto',
-               company_id: company.id,
+               company: company,
                location: 'São Paulo')
     Job.create(title: 'Vaga de QA',
                category: 'QA',
-               company_id: company.id,
+               company: company,
                description: 'QA Junior com ao menos um projeto',
                location: 'São Paulo')
     visit root_path

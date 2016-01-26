@@ -2,7 +2,6 @@ require 'rails_helper'
 
 feature 'User creates a new job' do
   scenario 'successfully' do
-
     company = Company.create(name: 'Campus Code',
                             location: 'São Paulo',
                             mail: 'contato@campus.com.br',

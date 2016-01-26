@@ -11,7 +11,7 @@ feature 'Visitor visits job details' do
                category: 'Desenvolvedor',
                description: 'Dev Junior Rails com ao menos um projeto',
                location: 'São Paulo',
-               company_id: company.id)
+               company: company)
 
     visit root_path
 

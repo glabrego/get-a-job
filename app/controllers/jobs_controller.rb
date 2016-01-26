@@ -4,12 +4,11 @@ class JobsController < ApplicationController
   end
 
   def new
-    @companies = Company.all
     @job = Job.new
+    @companies = Company.all
   end
 
   def create
-    @companies = Company.all
     @job = Job.create(job_params)
     redirect_to @job
   end
@@ -18,6 +17,7 @@ class JobsController < ApplicationController
 
   def job_params
     params.require(:job)
-      .permit(:title, :location, :category, :company_id, :description, :featured)
+      .permit(:title, :location, :category, :description, :featured,
+             :company_id)
   end
 end
