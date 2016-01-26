@@ -9,8 +9,13 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.create(job_params)
-    redirect_to @job
+    @job = Job.new(job_params)
+    if @job.save
+      redirect_to @job
+    else
+      @companies = Company.all
+      render new_job_path
+    end
   end
 
   private

@@ -18,17 +18,16 @@
         null,
         1,
         1,
-        null,
-        null,
-        1,
-        1,
         1,
         null,
         null,
         1,
+        1,
+        null,
         null,
         1,
         null,
+        1,
         1,
         null,
         null
@@ -43,6 +42,7 @@
       "/home/glabrego/workspace/emprego-ja/app/models/job.rb": [
         1,
         1,
+        1,
         null
       ],
       "/home/glabrego/workspace/emprego-ja/app/controllers/jobs_controller.rb": [
@@ -52,20 +52,25 @@
         null,
         null,
         1,
-        2,
-        2,
+        3,
+        3,
         null,
         null,
         1,
+        3,
+        3,
         2,
-        2,
+        null,
+        1,
+        1,
+        null,
         null,
         null,
         1,
         null,
         1,
         null,
-        2,
+        3,
         null,
         null,
         null
@@ -78,6 +83,6 @@
         null
       ]
     },
-    "timestamp": 1453777635
+    "timestamp": 1453809687
   }
 }

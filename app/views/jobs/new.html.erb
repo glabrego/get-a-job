@@ -1,3 +1,14 @@
+<% if @job.errors.any? %>
+  <div class="alert alert-danger">
+    <h3><%= pluralize(@job.errors.count, "error") %> prohibited this post from being saved:</h3>
+    <ul>
+    <% @job.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @job do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
