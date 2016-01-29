@@ -21,34 +21,30 @@
 
     </div>
     <div id="sidebar" class="col-md-4">
-      <div id="companies" class="companies">
 
-        <h3>Sidemenu</h2>
+        <h2>Sidemenu</h2>
 
-        <h4>Companies</h3>
-        <% @companies.each do |company| %>
-          <% if company.premium? %>
-            <p><em>Empresa Premium</em></p>
+        <h3>Companies</h3>
+        <div id="companies" class="list-group">
+          <% @companies.each do |company| %>
+            <% if company.premium? %>
+              <p><em>Empresa Premium</em></p>
+            <% end %>
+            <%= link_to company.name, company, class: 'list-group-item'%>
           <% end %>
+        </div>
 
-          <%= link_to company.name, company, class: 'btn btn-link'%>
-        <% end %>
-
-      </div>
-
-      <h4> Categories</h3>
-      <div id="categories" class="categories">
-
+      <h3>Categories</h3>
+      <div id="categories" class="list-group">
         <% @categories.each do |category| %>
-          <%= link_to category.name, category, class: 'btn btn-link' %>
+          <%= link_to category.name, category, class: 'list-group-item' %>
         <% end %>
-
       </div>
 
-      <h4> Hiring Type</h3>
-      <div id="hiring-type" class="hiring-type">
+      <h3>Hiring Type</h3>
+      <div id="hiring-type" class="list-group">
         <% Job::HIRING_OPTIONS.each do |hiring_type| %>
-          <%= link_to hiring_type, hiring_type_path(hiring_type), class: 'btn btn-link' %><br>
+          <%= link_to hiring_type, hiring_type_path(hiring_type), class: 'list-group-item' %>
         <% end %>
       </div>
 
