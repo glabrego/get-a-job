@@ -1,11 +1,13 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:edit, :update, :show]
+  before_action :authenticate_user!, except: [:show]
   def new
     @company = Company.new
   end
 
   def create
     @company = Company.new(company_params)
+    @company.user = current_user
     if @company.save
       redirect_to @company
     else
@@ -15,6 +17,10 @@ class CompaniesController < ApplicationController
   end
 
   def edit
+    if current_user.id != @company.user_id
+      redirect_to root_path, alert: 'You are not allowed to edit that company!'
+    end
+
   end
 
   def update

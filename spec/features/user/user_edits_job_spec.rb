@@ -3,15 +3,19 @@ require 'rails_helper'
 feature 'User creates a new job' do
 
   scenario 'successfully' do
+    user = User.create(email: 'queroserdev@locaweb.com',
+                      password:   '12345678')
     company = Company.create(name:    'Campus Code',
                             location: 'São Paulo',
                             mail:     'contato@campuscode.com.br',
-                            phone:    '2369-3476')
+                            phone:    '2369-3476',
+                            user: user)
 
     new_company = Company.create(name:     'Code Campus',
                                  location: 'Refice',
                                  mail:     'contato@codecampus.com.br',
-                                 phone:    '1111-5555')
+                                 phone:    '1111-5555',
+                                 user: user)
 
     category = Category.create(name: 'Desenvolvedor')
 
@@ -21,7 +25,10 @@ feature 'User creates a new job' do
                description: 'Dev Junior Rails com ao menos um projeto',
                location: 'São Paulo',
                company: company,
-               category: category)
+               category: category,
+               user: user)
+
+    login(user.email, user.password)
 
     visit edit_job_path(job)
 
@@ -41,10 +48,14 @@ feature 'User creates a new job' do
   end
 
   scenario 'featured job' do
+    user = User.create(email: 'queroserdev@locaweb.com',
+                      password:   '12345678')
+
     company = Company.create(name:     'Campus Code',
                             location: 'São Paulo',
                             mail:     'contato@campuscode.com.br',
-                            phone:    '2369-3476')
+                            phone:    '2369-3476',
+                            user: user)
 
     category = Category.create(name: 'Desenvolvedor')
 
@@ -53,7 +64,10 @@ feature 'User creates a new job' do
                location:    'São Paulo',
                company:  company,
                category: category,
+               user: user,
                featured:    false)
+
+    login(user.email, user.password)
 
     visit edit_job_path(job)
 
@@ -74,6 +88,36 @@ feature 'User creates a new job' do
     expect(page).to have_content 'Vaga em Destaque'
   end
 
+  scenario "and other users doesn't edit my jobs" do
+    user = User.create(email: 'queroserdev@locaweb.com',
+                      password:   '12345678')
+
+    company = Company.create(name:     'Campus Code',
+                            location: 'São Paulo',
+                            mail:     'contato@campuscode.com.br',
+                            phone:    '2369-3476',
+                            user: user)
+
+    category = Category.create(name: 'Desenvolvedor')
+
+    job = Job.create(title: 'Vaga de Dev',
+               description: 'Dev Junior Rails com ao menos um projeto',
+               location:    'São Paulo',
+               company:  company,
+               category: category,
+               user: user,
+               featured:    false)
+
+     user2 = User.create(email: 'hacker@locaweb.com',
+                       password:   '98675644')
+
+    login(user2.email, user2.password)
+
+    visit edit_job_path(job)
+
+    expect(current_path).to_not eql edit_job_path(job)
+    expect(page).to have_content 'You are not allowed to edit that job!'
+  end
+
 
 end
-

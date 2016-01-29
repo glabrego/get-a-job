@@ -16,6 +16,21 @@ module ModelsMacros
     company.jobs.create(title: 'Desenvolvedor Rails',
                description: 'Desenvolvedor Full Stack Rails',
                location: 'São Paulo - SP',
+               hiring_type: 'Freelancer',
                category: category)
+  end
+
+  def login(email = nil, password = nil)
+    email ||= 'queroserdev@locaweb.com'
+    password ||= '12345678'
+    user = User.create(email: email,
+                      password: password  )
+
+    visit new_user_session_path
+
+    fill_in 'Email',     with: user.email
+    fill_in 'Password', with: user.password
+
+    click_on 'Log in'
   end
 end
