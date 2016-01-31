@@ -1,6 +1,10 @@
 <span class="error_message"><%= flash[:warning] %></span>
 <%= form_for @category do |f| %>
-  <%= f.label :name  %>
-  <%= f.text_field :name  %>
-  <%= f.submit 'Criar Categoria' %>
+  <div class="form_group">
+    <%= f.label :name  %>
+    <%= f.text_field :name, class: 'form-control'  %>
+  </div>
+  <div class="form_group">
+    <%= f.submit 'Criar Categoria', class: 'btn btn-primary' %>
+  </div>
 <% end %>
