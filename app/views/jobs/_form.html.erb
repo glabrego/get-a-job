@@ -19,19 +19,19 @@
     </div>
     <div class="form_group">
       <%= f.label :company_id %>
-      <%= f.collection_select :company_id, @companies, :id, :name, prompt: 'Select a company', class: 'form-control' %>
+      <%= f.collection_select :company_id, @companies, :id, :name, {prompt: 'Select a company'}, {class: "form-control"} %>
     </div>
     <div class="form_group">
       <%= f.label :category_id %>
-      <%= f.collection_select :category_id, @categories, :id, :name, prompt: 'Select a category', class: 'form-control' %>
+      <%= f.collection_select :category_id, @categories, :id, :name, {prompt: 'Select a category'}, {class: "form-control"} %>
     </div>
     <div class="form_group">
       <%= f.label :hiring_type %>
-      <%= f.select :hiring_type, options_for_select(Job::HIRING_OPTIONS), class: 'form-control' %>
+      <%= f.select :hiring_type, options_for_select(Job::HIRING_OPTIONS), {prompt: 'Select a Hiring Type'}, {class: "form-control"} %>
     </div>
     <div class="form_group">
       <%= f.label :featured  %>
-      <%= f.check_box :featured, class: 'checkbox-inlune' %>
+      <%= f.check_box :featured, class: 'checkbox-inline' %>
     </div>
     <div class="form_group">
       <%= f.label :description %>
