@@ -1,7 +1,7 @@
 <h2><%= @job.title %></h2>
 <hr>
 <% if @job.expired? %>
-<h2>Vaga Expirada!</h2>
+  <h2>Vaga Expirada!</h2>
 <% end %>
 <p><strong>Categoria:</strong> <%= @job.category.name %></p>
 <p><strong>Empresa:</strong> <%= @job.company.name%></p>
