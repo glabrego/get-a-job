@@ -3,6 +3,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    respond_with @category
   end
 
   def new
@@ -10,12 +11,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(name: params[:category][:name])
-    if @category.save
-      redirect_to @category
-    else
-      flash[:warning] = "Warning! All fields are mandatory."
-      render :new
-    end
+    @category = Category.create(name: params[:category][:name])
+    respond_with @category
   end
 end

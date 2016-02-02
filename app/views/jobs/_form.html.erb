@@ -1,13 +1,4 @@
-<div id="errors">
-<% if @job.errors.any? %>
-<ul>
-  <% @job.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  <% end %>
-</ul>
-<% end %>
-</div>
-<ul>
+<span class="error_message"><%= flash[:alert] %></span>
   <%= form_for @job do |f| %>
     <div class="form_group">
       <%= f.label :title %>

@@ -6,14 +6,9 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.new(company_params)
+    @company = Company.create(company_params)
     @company.user = current_user
-    if @company.save
-      redirect_to @company
-    else
-      flash[:warning] = 'Warning! All fields are mandatory.'
-      render :new
-    end
+    respond_with @company
   end
 
   def edit
@@ -24,12 +19,8 @@ class CompaniesController < ApplicationController
   end
 
   def update
-    if @company.update(company_params)
-      redirect_to @company
-    else
-      flash[:warning] = 'Warning! All fields are mandatory.'
-      render :edit
-    end
+    @company.update(company_params)
+    respond_with @company
   end
 
   def show

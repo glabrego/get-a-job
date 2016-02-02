@@ -17,21 +17,14 @@ class JobsController < ApplicationController
   end
 
   def update
-    if @job.update(job_params)
-      redirect_to @job
-    else
-      render :edit
-    end
+    @job.update(job_params)
+    respond_with @job
   end
 
   def create
-    @job = Job.new(job_params)
+    @job = Job.create(job_params)
     @job.user_id = current_user.id
-    if @job.save
-      redirect_to @job
-    else
-      render :new
-    end
+    respond_with @job
   end
 
   private
